@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alean Family Olivia — семейный курорт в Анапе</title>
+  <link rel="preload" href="assets/facade.webp" as="image">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/gsap.min.js"></script>
+  <script defer src="vendor/ScrollTrigger.min.js"></script>
+  <script defer src="vendor/lenis.min.js"></script>
+  <script defer src="motion.js"></script>
+  <script defer src="hero-slider.js"></script>
+  <script defer src="booking.js"></script>
+</head>
+<body>
+<header>
+      <nav aria-label="Навигация по странице">
+        <a href="#about" data-roll>Об отеле</a>
+        <a href="#booking" data-roll>Номера</a>
+        <a href="#inclusive" data-roll>Всё включено</a>
+      </nav>
+      <a class="logo" href="#top" aria-label="Alean Family Olivia, к началу страницы"><img src="assets/logo.svg" alt=""><img class="logo-color" src="assets/logo-header-light.svg" alt=""></a>
+      <div class="contact"><a class="phone" href="tel:88002500030" data-roll>8 (800) 250 00 30</a><span class="available"><i></i>Круглосуточно 24/7</span></div>
+    </header>
+<main>
+  <div class="hero-stage" id="top">
+  <section class="hero" aria-labelledby="resort-name">
+    <div class="hero-media"><div class="facade">
+      <div class="slide-photo current"><img src="assets/facade.webp" alt="Фасад курорта Alean Family Olivia"></div>
+      <div class="slide-photo" aria-hidden="true"><img src="assets/sea-balcony.webp" alt="Балкон номера с видом на море"></div>
+      <div class="slide-photo" aria-hidden="true"><img src="assets/kids-club.webp" alt="Пространство для детей и подростков"></div>
+    </div></div>
+
+    <div class="hero-copy">
+      <p class="location">Анапа, первая береговая линия</p>
+      <h1 id="resort-name">Alean<br>Family Olivia</h1>
+      <a class="action light" href="#about"><span data-roll>Больше об отеле</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 14 14 2 M2 2h12v12"/></svg></a>
+    </div>
+    <div class="slide-rail"><div class="slide-controls" role="group" aria-label="Слайды о курорте">
+      <button type="button" data-location="Анапа, первая береговая линия" data-title="Alean|Family Olivia">Alean Family Olivia</button>
+      <button type="button" data-location="От 34 до 108 м²" data-title="Номера с видом|на Чёрное море">Номера с видом на Чёрное море</button>
+      <button type="button" data-location="Под разный возраст" data-title="Для детей|и подростков">Для детей и подростков</button>
+    </div></div>
+    <aside class="presale" aria-label="Предпродажа">
+      <p class="eyebrow presale-label" data-text><i></i>Предпродажа</p>
+      <div class="sale-card" data-wipe>
+        <p class="season">Отдых в сезоне</p><p class="year">2027</p>
+        <ul><li>Новый семейный курорт</li><li>Все номера с видом на море</li><li>Ультра всё включено</li></ul>
+        <a href="#booking" class="action dark"><span data-roll>Подобрать номер</span><img src="assets/key.svg" alt=""></a>
+      </div>
+    </aside>
+    <figure class="room" data-wipe><img src="assets/bedroom.webp" alt="Номер с балконом и видом на море"></figure>
+    <img class="brush" src="assets/brush.svg" alt="" data-wipe>
+  </section>
+  </div>
+  <section class="about" aria-labelledby="about">
+    <img class="wave" src="assets/wave.svg" alt="">
+    <div class="story">
+      <h2 id="about"><span class="quote" aria-hidden="true">❝</span><span data-text>Alean Family Olivia —<br>новый семейный курорт<br>на Пионерском проспекте<br>в Анапе</span></h2>
+      <div class="description" id="inclusive">
+        <p data-text>На территории предусмотрены<br>рестораны и бары, бассейны,<br>детские клубы, спортивные площадки<br>и SPA-комплекс.</p>
+        <p data-text>Отель будет работать круглый год<br>по системе «Ультра всё включено».<br>Пляж и открытые бассейны доступны<br>в высокий сезон; состав услуг зависит<br>от дат поездки.</p>
+      </div>
+    </div>
+    <div class="thumbs">
+      <figure data-wipe><img src="assets/dining.png" alt="Интерьер ресторана"></figure>
+      <figure data-wipe><img src="assets/spa.png" alt="Интерьер курорта"></figure>
+      <figure data-wipe><img src="assets/pool.png" alt="Бассейн"></figure>
+    </div>
+    <div class="stats">
+      <div class="stat grounds" data-wipe><p><b>5,17</b><em>га</em></p><small>территория отеля</small></div>
+      <div class="stat rooms" data-wipe><p><b>615</b></p><small>номеров с видом на море</small></div>
+      <div class="stat area" data-wipe><p><b>34–108</b><em>м²</em></p><small>площадь номеров без балкона</small></div>
+    </div>
+    <div class="hotel-scene"><img class="hotel" src="assets/hotel.webp" alt="Панорама отеля с открытым бассейном"></div>
+  </section>
+  <section class="booking" id="booking" aria-labelledby="booking-title">
+    <h2 id="booking-title" class="eyebrow" data-text><i></i>Забронируйте номер прямо сейчас</h2>
+    <div class="booking-panel" data-wipe>
+      <div class="booking-fields">
+        <button class="field" type="button" aria-controls="hotels" aria-expanded="false">
+          <span class="field-label">Отель</span><span class="field-value"><span data-roll>Выбрать отель</span><svg viewBox="0 0 20 16" aria-hidden="true"><path d="m1 5 9 8 9-8"/></svg></span>
+        </button>
+        <button class="field" type="button" aria-controls="dates" aria-expanded="false">
+          <span class="field-label">Дата заезда и выезда</span><span class="field-value"><span data-roll>Выбрать даты</span><i class="picker-icon calendar-icon" aria-hidden="true"></i></span>
+        </button>
+        <button class="field" type="button" aria-controls="guests" aria-expanded="false">
+          <span class="field-label">Размещение</span><span class="field-value"><span data-roll>Выбрать гостей</span><i class="picker-icon guests-icon" aria-hidden="true"></i></span>
+        </button>
+        <label class="field promo"><span class="field-label">Промокод</span><span class="promo-control"><input class="field-value" type="text" name="promo" placeholder="Введите промокод" autocomplete="off"><span class="field-value promo-roll" aria-hidden="true"></span></span></label>
+      </div>
+      <button class="search-rooms" type="button" aria-disabled="true"><span data-roll>Найти номер</span></button>
+    </div>
+  </section>
+</main>
+<div id="hotels" class="picker hotel-options" popover="manual" role="group" aria-label="Выберите отель" data-lenis-prevent>
+  <button type="button">Alean Family Olivia</button><button type="button">Alean Family Extency</button>
+  <button type="button">Alean Family Health</button><button type="button">Alean Family Emerald</button>
+</div>
+<div id="dates" class="picker calendar" popover="manual" role="group" aria-label="Выберите даты поездки" data-lenis-prevent>
+  <div class="month-nav"><button type="button" data-month="-1" aria-label="Предыдущий месяц">‹</button><strong aria-live="polite"></strong><button type="button" data-month="1" aria-label="Следующий месяц">›</button></div>
+  <p class="range-hint" aria-live="polite"></p>
+  <div class="weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+  <div class="days"></div>
+</div>
+<div id="guests" class="picker guest-options" popover="manual" role="group" aria-label="Количество гостей" data-lenis-prevent>
+  <fieldset><legend>Взрослые</legend><div class="guest-choices" data-group="adults"></div></fieldset>
+  <fieldset><legend>Дети</legend><div class="guest-choices" data-group="children"></div></fieldset>
+</div>
+</body>
+</html>
