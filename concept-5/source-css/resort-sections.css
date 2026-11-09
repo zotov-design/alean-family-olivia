@@ -1,0 +1,358 @@
+.season-offer, .accommodations, .dining-section, .kids-section, .sea-section, .construction-section, #open-pools {
+  scroll-margin-top: 3rem;
+}
+.section-title, .section-lead, .display-price,
+.season-terms h3, .dining-card h3, .kids-shared h3, .sea-features h3 {
+  font-family: var(--display);
+  font-weight: 400;
+}
+.section-title { font-size: 4rem; line-height: 1; }
+.section-lead { font-size: 1.75rem; line-height: 1.25; }
+.display-price { font-size: 6.875rem; line-height: 1; }
+.section-note { font-size: 1rem; color: #58747c; }
+
+.season-offer { background: var(--teal); color: white; padding-bottom: 10rem; }
+.season-offer > .eyebrow { margin: 0 var(--pad) 1.625rem; }
+.season-layout { display: grid; grid-template-columns: 49% minmax(0,1fr); align-items: center; }
+.season-price { background: white; color: var(--ink); padding: 4.375rem 4.5rem 2.5rem var(--pad); }
+.season-price .display-price { display: flex; align-items: flex-start; }
+.season-price .display-price sup { color: #aab6ba; }
+.season-price .section-lead { margin-top: 1.25rem; }
+.offer-actions { display: flex; align-items: center; gap: 1.875rem; margin-top: 9.375rem; }
+.offer-actions .date-action { width: 20.0625rem; }
+.date-action {
+  --fill: var(--ink);
+  --active: white;
+  justify-content: center;
+  background: var(--aqua);
+  color: white;
+  cursor: pointer;
+  border: 0;
+  padding: 0 1.125rem;
+  white-space: nowrap;
+}
+.manager-action { width: auto; flex: 1; gap: 1rem; }
+.season-price .section-note { margin-top: 1.25rem; }
+.season-terms { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 4.375rem 1.875rem; padding-left: 19%; padding-right: var(--pad); }
+.season-terms h3 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .875rem; max-width: 12em; }
+.season-terms p { color: #dcebed; }
+
+.accommodations { background: white; padding: 10rem 0; }
+.room-category { display: grid; grid-template-columns: minmax(0, 1fr) 49%; align-items: stretch; }
+.room-category + .room-category { margin-top: 10rem; }
+.room-category:nth-child(even) { grid-template-columns: 49% minmax(0, 1fr); }
+.room-category:nth-child(even) .room-visual { grid-column: 1; grid-row: 1; }
+.room-details { align-self: center; padding: 3rem var(--pad); }
+.room-category:nth-child(even) .room-details { padding-left: 11.5rem; padding-right: var(--pad); }
+.room-category:has(.eyebrow) { position: relative; }
+.room-details .eyebrow { position: absolute; top: 0; left: var(--pad); }
+.accommodations .eyebrow i { background: var(--aqua); }
+.room-details .section-title, .room-subtitle { display: inline-block; vertical-align: baseline; }
+.room-subtitle { margin-left: .9rem; color: #58747c; font: 400 1.75rem/1.25 var(--display); }
+.room-description { margin-top: 1.875rem; max-width: 42.5rem; }
+.room-visual { margin: 0; aspect-ratio: 940 / 722; overflow: hidden; }
+.room-amenities, .dash-list, .kids-schedule { list-style: none; padding: 0; }
+.room-amenities { display: flex; gap: 1.875rem; flex-wrap: wrap; margin: 2rem 0; font-size: 1.125rem; }
+.room-amenities li { display: flex; align-items: center; gap: .75rem; }
+.room-amenities img { width: 1.75rem; height: 1.75rem; object-fit: contain; }
+.room-rate { display: flex; flex-wrap: wrap; gap: .75rem; }
+.room-rate > p { display: flex; flex-direction: column; justify-content: center; background: #eef4f6; padding: .25rem 1.25rem; }
+.room-rate small { font-size: 1rem; }
+.room-rate .date-action { width: 11.75rem; }
+
+.dining-section { background: #f4efe5; padding: 10rem 0 0; }
+.dining-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin: 0 var(--pad) 3.75rem; }
+.dining-header .section-lead { margin-top: 1.625rem; }
+.dining-controls { display: flex; gap: .625rem; }
+.circle-action {
+  --circle-fill: var(--ink);
+  --circle-active: white;
+  display: grid;
+  place-items: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  flex: none;
+  width: max(44px,4.4375rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  padding: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: color .28s,border-color .28s;
+}
+.circle-action::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--circle-fill);
+  clip-path: inset(100% 0 0);
+  transition: clip-path .55s cubic-bezier(.25,1,.5,1);
+}
+.circle-action:is(:hover,:focus-visible) { color: var(--circle-active); border-color: var(--circle-fill); }
+.circle-action:is(:hover,:focus-visible)::before { clip-path: inset(0); }
+.circle-action svg { width: 33%; height: 33%; fill: none; stroke: currentColor; stroke-width: 2.5; }
+.dining-viewport { overflow: clip; margin-top: -3.75rem; }
+.dining-track {
+  --dining-gap: 2.5rem;
+  --dining-small: 42.25rem;
+  --dining-large: 51.25rem;
+  --dining-small-height: 27.875rem;
+  --dining-large-height: 34.375rem;
+  --dining-slide-motion: .75s cubic-bezier(.22,.68,0,1);
+  display: flex;
+  gap: var(--dining-gap);
+  align-items: flex-start;
+  padding: 4rem var(--pad) .25rem;
+  min-height: calc(var(--dining-large-height) + 4.25rem);
+  transform: translateX(calc(-1 * var(--dining-index, 0) * (var(--dining-small) + var(--dining-gap))));
+  transition: transform var(--dining-slide-motion);
+}
+.dining-card {
+  flex: 0 0 var(--dining-small);
+  height: var(--dining-small-height);
+  position: relative;
+  color: white;
+  transition: flex-basis var(--dining-slide-motion), height var(--dining-slide-motion);
+}
+.dining-track.dining-jump, .dining-jump .dining-card { transition: none; }
+.dining-initial .dining-before { visibility: hidden; }
+.dining-card.is-open { clip-path: none !important; }
+.dining-card-wide { flex-basis: var(--dining-large); height: var(--dining-large-height); }
+.dining-select { position: absolute; z-index: 2; inset: 0; border: 0; padding: 0; background: transparent; cursor: pointer; }
+.dining-select:focus-visible { outline: 2px solid var(--aqua); outline-offset: -3px; }
+.dining-photo, .dining-cover, .dining-info { position: absolute; inset: 0; }
+.dining-cover, .dining-info, .dining-paid { padding: 2.125rem; }
+.dining-cover { background: rgb(0 0 0 / .35); }
+.dining-card h3, .kids-shared h3 { font-size: 2.5rem; line-height: 1.05; margin: 0 0 1.125rem; }
+.dining-info { background: white; color: var(--ink); overflow: hidden; clip-path: inset(100% 0 0); visibility: hidden; transition: clip-path .55s cubic-bezier(.25,1,.5,1),visibility 0s .55s; }
+.dining-card.is-open .dining-info { visibility: visible; clip-path: inset(0); transition-delay: 0s; }
+.dining-info-copy { position: relative; z-index: 1; max-width: 32rem; opacity: 0; transform: translateY(12px); transition: opacity .25s,transform .25s; }
+.dining-card.is-open .dining-info-copy { opacity: 1; transform: none; transition-delay: .25s; }
+.dining-art { position: absolute; width: 16.9375rem; height: 16.9375rem; bottom: -1.875rem; left: -.8125rem; object-fit: contain; }
+.dessert-brush {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  z-index: 1;
+  left: 59.4%;
+  top: -3.625rem;
+  width: 7.6875rem;
+  aspect-ratio: 123 / 113.3;
+  pointer-events: none;
+}
+.dessert-brush img { width: 92.1%; height: auto; transform: rotate(-90deg); }
+.brush-pending .dessert-brush { clip-path: polygon(0 100%,0 100%,0 100%); }
+.brush-drawn .dessert-brush { animation: draw-dining-brush .95s cubic-bezier(.25,1,.5,1) both; }
+@keyframes draw-dining-brush {
+  from { clip-path: polygon(0 100%,0 100%,0 100%); }
+  to { clip-path: polygon(0 -100%,200% 100%,0 100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dining-viewport .dessert-brush { animation: none; clip-path: none; }
+}
+.dining-toggle { --circle-fill: white; --circle-active: var(--ink); position: absolute; z-index: 3; right: 2.125rem; bottom: 2.125rem; color: white; }
+.dining-card.is-open .dining-toggle { --circle-fill: var(--ink); --circle-active: white; color: var(--ink); }
+.dining-card.is-open .dining-toggle:is(:hover,:focus-visible) { color: white; }
+.dining-symbol {
+  width: 33%;
+  aspect-ratio: 1;
+  background: currentColor;
+  mask: url("assets/dining-plus.svg") center / contain no-repeat;
+}
+.dining-card.is-open .dining-symbol {
+  mask-image: url("assets/dining-minus.svg");
+  transform: rotate(90deg);
+}
+.dining-paid { min-height: var(--dining-small-height); background: white; color: var(--ink); }
+.dash-list { display: grid; gap: .875rem; margin: 0; }
+.dash-list li { display: flex; gap: 1rem; align-items: baseline; }
+.dash-list li::before { content: ""; width: 1.25rem; height: 1px; background: currentColor; opacity: .65; flex: none; transform: translateY(-.3em); }
+
+.kids-section { background: linear-gradient(#f4efe5,white); padding: 10rem 0; }
+.kids-section > h2 { margin: 0 var(--pad) 3.875rem; }
+.kids-layout { display: grid; grid-template-columns: 51% minmax(0,1fr); }
+.kids-program { position: relative; }
+.kids-tabs { position: relative; z-index: 1; display: flex; padding-left: var(--pad); border-bottom: 1px solid #dce4e5; }
+.kids-tabs button {
+  display: flex; align-items: center; gap: 1rem; flex: 0 1 13.1rem;
+  border: 0; background: none; color: #637b81; padding: 0 1.875rem 1.25rem;
+  font: 600 1.25rem/1.5 Harmonia,Arial,sans-serif; white-space: nowrap; cursor: pointer;
+  transition: color .25s;
+}
+.kids-tabs button:is(:hover,:focus-visible,[aria-selected="true"]) { color: var(--ink); }
+.kids-tabs img { width: 3.25rem; height: 3.25rem; border-radius: 50%; }
+.kids-tab-line { position: absolute; height: 2px; background: var(--ink); bottom: -1px; left: 0; width: var(--tab-width,13.1rem); transform: translateX(var(--tab-x,var(--pad))); transition: width .45s cubic-bezier(.25,1,.5,1),transform .45s cubic-bezier(.25,1,.5,1); }
+.kids-wave-window { position: absolute; top: 11.9375rem; left: 0; width: 100%; height: 40.5625rem; overflow: hidden; pointer-events: none; }
+.kids-waves { position: absolute; top: 0; left: -132.25%; width: 337.86%; height: auto; mix-blend-mode: screen; }
+.kids-panels { display: grid; grid-template-rows: auto auto; align-content: start; min-height: 48rem; }
+.kids-panel {
+  position: relative;
+  grid-area: 1 / 1 / 3 / 2;
+  display: grid;
+  grid-template-rows: subgrid;
+  padding-top: 11.5rem;
+}
+.kids-panel[hidden] { visibility: hidden; pointer-events: none; }
+.kids-age { padding: 0 0 0 var(--pad); width: 54%; }
+.kids-age p + p { margin-top: 1.25rem; font-size: 1.125rem; }
+.kids-photo { width: 44%; aspect-ratio: 430 / 440; margin: -2.5rem 0 0 auto; overflow: hidden; }
+.kids-shared { background: white; align-self: start; padding: 3.75rem 3.125rem 4.375rem; }
+.kids-shared .dash-list { margin: 1.875rem 0 3.75rem; }
+.kids-schedule { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .75rem; margin: 2.5rem 0 0; }
+.kids-schedule li { position: relative; display: grid; align-content: start; gap: .5rem; }
+.kids-schedule li:not(:last-child)::after { content: ""; position: absolute; height: 1px; background: #d3e1e8; width: 25%; right: 4%; top: 1.25rem; }
+.kids-schedule time { font: 400 2.5rem/1.05 var(--display); }
+.kids-schedule span { font-size: 1.125rem; }
+
+.sea-section { background: white; padding: 0 var(--pad) 10rem; }
+.sea-features { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8.4375rem; margin: 3.75rem 5rem 5rem 0; }
+.sea-features h3 { font-size: 2rem; line-height: 1.15; margin: 0 0 1.375rem; }
+.sea-visual { position: relative; }
+.sea-visual figure { aspect-ratio: 1680 / 630; overflow: hidden; }
+.sea-section > .section-note { max-width: 46.5625rem; margin-top: 2.5rem; }
+.waterpark-badge { position: absolute; bottom: 1.875rem; left: 1.875rem; max-width: calc(100% - 3.75rem); display: flex; align-items: center; gap: 1rem; padding: .25rem 1.75rem .25rem .25rem; border-radius: 999px; background: white; }
+.waterpark-badge img { width: 6.75rem; height: 6.75rem; border-radius: 50%; }
+.waterpark-badge strong, .waterpark-badge small { display: block; }
+.waterpark-badge small { color: #58747c; font-size: 1rem; }
+
+.construction-section { background: white; }
+.construction-header { margin: 0 var(--pad) 3.75rem; display: grid; grid-template-columns: minmax(0,1fr) auto; column-gap: 1.5rem; align-items: end; }
+.construction-header .section-title { grid-column: 1 / -1; margin-bottom: 1.625rem; }
+.construction-body { position: relative; padding-top: 21.125rem; }
+.construction-timeline {
+  position: absolute;
+  inset: 0 0 auto var(--pad);
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr)) minmax(0,1.233fr);
+  height: 62.3125rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.construction-stage { border-left: 1px solid #d3e1e8; padding: 2.5rem; }
+.construction-stage:last-child { background: #f1f5f8; border-color: transparent; }
+.construction-thumb { width: 8.75rem; height: 8.75rem; border-radius: 50%; position: relative; overflow: hidden; }
+.construction-thumb-frame img, .construction-thumb-glazing img { position: absolute; max-width: none; }
+.construction-thumb-frame img { width: 453.18%; height: 252.94%; top: -127.14%; left: -54.12%; }
+.construction-thumb-glazing img { width: 1002.11%; height: 559.32%; top: -279.53%; left: -334.77%; }
+.construction-stage h3 { font: 400 1.75rem/1.25 var(--display); margin: 1.875rem 0 .875rem; }
+.construction-scene { position: relative; isolation: isolate; overflow: hidden; aspect-ratio: 1920 / 1080; }
+.construction-visual { position: absolute; inset: 0; overflow: hidden; }
+.construction-image { position: absolute; inset: 0; }
+.construction-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mask: url("assets/construction-aerial.webp") center / 100% 100% no-repeat;
+}
+.construction-glow::before, .construction-glow::after { content: ""; position: absolute; width: 56.09%; background-size: 100% 100%; }
+.construction-glow::before { left: -19.43%; top: -32.41%; height: 99.72%; background-image: url("assets/construction-glow-1.svg"); }
+.construction-glow::after { left: 10.68%; top: -13.43%; height: 40.74%; background-image: url("assets/construction-glow-2.svg"); }
+.construction-ratings {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 3.75rem;
+  display: grid;
+  grid-template-columns: repeat(6,9.25rem);
+  justify-content: center;
+  gap: .625rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.construction-rating { display: flex; flex-direction: column; align-items: center; background: white; border-radius: 999px; padding: .25rem .25rem 2.5rem; }
+.construction-score { display: flex; align-items: center; justify-content: center; gap: .375rem; width: 100%; aspect-ratio: 1; border-radius: 50%; background: var(--rating-color); color: white; font: 400 1.75rem/1.25 var(--display); }
+.construction-score img { width: 1.75rem; height: auto; object-fit: contain; }
+.construction-brand { margin-top: 1.125rem; font-size: 1rem; color: #79939a; }
+.construction-rating strong { font-weight: 600; }
+.construction-fade {
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 0;
+  height: 28.148%;
+  pointer-events: none;
+  background-image: linear-gradient(0deg,var(--teal),transparent 9%), url("assets/construction-fade.webp"), url("assets/construction-fade.webp"), url("assets/construction-fade.webp");
+  background-size: 100% 100%;
+}
+
+@media (max-width: 760px) {
+  .section-title { font-size: clamp(32px,7vw,52px); }
+  .display-price { font-size: clamp(42px,11vw,64px); }
+  .section-lead { font-size: 20px; }
+  .section-note { font-size: 12px; }
+  .season-offer { padding: 18px 0 48px; }
+  .season-layout, .room-category, .room-category:nth-child(even), .kids-layout { grid-template-columns: minmax(0,1fr); }
+  .season-price, .season-terms { padding: 26px var(--pad); }
+  .offer-actions { margin-top: 30px; gap: 10px; flex-wrap: wrap; }
+  .offer-actions .action { min-width: 150px; width: auto; flex: 1; }
+  .season-terms { gap: 22px 16px; }
+  .season-terms h3 { font-size: 19px; }
+  .accommodations { padding: 42px 0 52px; }
+  .room-category + .room-category { margin-top: 44px; }
+  .room-category .room-details, .room-category:nth-child(even) .room-details { padding: 0 var(--pad) 24px; }
+  .room-category:nth-child(even) .room-visual { grid-row: auto; }
+  .room-details .eyebrow { position: static; margin-bottom: 20px; }
+  .room-subtitle { margin-left: 6px; font-size: 16px; }
+  .room-amenities { gap: 10px 16px; }
+  .room-rate .date-action { width: 155px; }
+  .dining-section { padding-top: 46px; }
+  .dining-header { align-items: flex-start; flex-wrap: wrap; margin-bottom: 24px; }
+  .dining-controls { margin-left: auto; }
+  .dining-viewport { margin-top: -24px; }
+  .dining-track {
+    --dining-gap: 14px;
+    --dining-small: min(72vw,340px);
+    --dining-large: min(82vw,380px);
+    --dining-small-height: 300px;
+    --dining-large-height: 328px;
+    min-height: 358px;
+    padding-top: 27px;
+  }
+  .dining-paid { height: auto; }
+  .dining-card h3, .kids-shared h3 { font-size: 26px; }
+  .dining-cover, .dining-info, .dining-paid { padding: 20px; }
+  .dining-info-copy { padding-bottom: 44px; }
+  .dining-toggle { right: 15px; bottom: 15px; }
+  .dining-art { width: 122px; height: 122px; bottom: -14px; }
+  .dessert-brush { top: -23px; width: 65px; }
+  .kids-section { padding: 52px 0 44px; }
+  .kids-section > h2 { margin-bottom: 25px; }
+  .kids-tabs { padding-inline: var(--pad); }
+  .kids-tabs button { justify-content: center; flex: 1; padding: 0 3px 12px; gap: 4px; font-size: 12px; }
+  .kids-tabs img { width: clamp(22px,7vw,34px); height: clamp(22px,7vw,34px); }
+  .kids-panels { min-height: 0; }
+  .kids-panel { padding-top: 35px; }
+  .kids-wave-window { top: 85px; height: 70%; }
+  .kids-age { width: auto; padding: 0 var(--pad); }
+  .kids-photo { width: min(65%,430px); margin: 18px 0 0 auto; }
+  .kids-shared { padding: 28px var(--pad); }
+  .kids-schedule { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+  .kids-schedule li:nth-child(even)::after { display: none; }
+  .sea-section { padding-bottom: 48px; }
+  .sea-features { grid-template-columns: 1fr; gap: 24px; margin: 28px 0; }
+  .sea-visual figure { aspect-ratio: 4 / 3; }
+  .waterpark-badge { bottom: 10px; left: 10px; max-width: calc(100% - 20px); font-size: 13px; }
+  .waterpark-badge img { width: 52px; height: 52px; }
+  .construction-header { display: block; margin-bottom: 26px; }
+  .construction-header .section-note { margin-top: 12px; }
+  .construction-body { padding-top: 0; }
+  .construction-timeline { position: static; grid-template-columns: repeat(2,minmax(0,1fr)); height: auto; margin-inline: var(--pad); }
+  .construction-stage { padding: 12px; }
+  .construction-stage:last-child { grid-column: 1 / -1; }
+  .construction-stage h3 { font-size: 18px; margin: 12px 0 4px; }
+  .construction-stage p { font-size: 14px; }
+  .construction-thumb { width: 65px; height: 65px; }
+  .construction-scene { aspect-ratio: auto; min-height: 540px; }
+  .construction-visual img { object-position: center; }
+  .construction-glow { display: none; }
+  .construction-ratings { grid-template-columns: repeat(3,minmax(0,76px)); gap: 7px; bottom: 20px; }
+  .construction-rating { padding: 2px 2px 9px; font-size: 10px; }
+  .construction-score { font-size: 18px; gap: 3px; }
+  .construction-score img { width: 15px; }
+  .construction-brand { margin-top: 4px; font-size: 10px; }
+  .construction-fade { height: 42%; }
+}

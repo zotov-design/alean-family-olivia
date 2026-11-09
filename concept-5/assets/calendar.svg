@@ -1,0 +1,27 @@
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="V1">
+<g id="Frame 58">
+<g id="Frame 59">
+<g id="Frame 52">
+<g id="Frame 50">
+<mask id="path-1-inside-1_1_2" fill="white">
+<path d="M-339 -42H26V50H-339V-42Z"/>
+</mask>
+<path d="M26 50V49H-339V50V51H26V50Z" fill="#1D444B" fill-opacity="0.12" mask="url(#path-1-inside-1_1_2)"/>
+<g id="Frame 51">
+<g id="Frame 42">
+<g id="Group 4">
+<path id="Vector" d="M25 20.9323C22.7535 20.9323 20.9322 19.1111 20.9322 16.8645V3.03394H1V16.8645C1 19.1111 2.82121 20.9323 5.0678 20.9323H25Z" stroke="#6BC2BD" stroke-width="1.5" stroke-miterlimit="10"/>
+<path id="Vector_2" d="M1 9.13574H20.9322" stroke="#6BC2BD" stroke-width="1.5" stroke-miterlimit="10"/>
+<path id="Vector_3" d="M1 16.8645V25.0001H20.9322V20.9323" stroke="#6BC2BD" stroke-width="1.5" stroke-miterlimit="10"/>
+<path id="Vector_4" d="M5 6L5 0" stroke="#6BC2BD" stroke-width="1.5" stroke-miterlimit="10"/>
+<path id="Vector_5" d="M17 6L17 0" stroke="#6BC2BD" stroke-width="1.5" stroke-miterlimit="10"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
