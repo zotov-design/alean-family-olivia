@@ -1,0 +1,1 @@
+document.addEventListener("submit",function(e){if(e.target.matches(".callback-form")){e.preventDefault();e.stopImmediatePropagation();alert("Отправка заявки доступна на версии сайта на хостинге.");}},true);

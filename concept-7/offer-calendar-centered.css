@@ -1,0 +1,21 @@
+.season-terms { grid-template-columns:minmax(0,1fr); }
+.season-terms p { max-width:38ch; }
+button.offer-terms-link { padding:0; border:0; background:transparent; color:inherit; font-family:inherit; cursor:pointer; }
+#offer-dialog { box-sizing:border-box; position:fixed; inset:0; margin:auto; width:min(660px,calc(100% - 32px)); height:fit-content; max-height:min(84dvh,780px); padding:0; border:none; background:white; color:var(--ink); overflow:auto; overscroll-behavior:contain; box-shadow:0 16px 80px #102d3852; }
+#offer-dialog::backdrop { background:#15383fcc; }
+.offer-dialog-head { position:sticky; top:0; display:flex; align-items:center; gap:16px; justify-content:space-between; padding:clamp(18px,3vw,36px); background:white; border-bottom:1px solid #d3e1e8; }
+.offer-dialog-head h2 { margin:0; font:400 clamp(24px,3vw,38px)/1.12 var(--display); }
+.offer-close { width:40px; }
+.offer-dialog-head form { margin:0; flex:none; }
+.offer-close .dining-symbol { width:16px; height:16px; transform:rotate(45deg); }
+.offer-close .dining-symbol::before, .offer-close .dining-symbol::after { height:2px; }
+#offer-dialog ul { margin:0; padding:20px clamp(18px,3vw,36px) 28px; list-style:none; }
+#offer-dialog li { padding:10px 0 10px 18px; position:relative; font:400 16px/1.45 Harmonia,Arial,sans-serif; }
+#offer-dialog li::before { content:""; position:absolute; top:1.22em; left:0; width:5px; height:5px; border-radius:50%; background:var(--teal); }
+html:has(#offer-dialog[open]) { overflow:hidden; }
+#dates .days { --day-size:28px; grid-template-rows:repeat(6,46px); }
+#dates .days button { display:grid; grid-template-rows:var(--day-size) 16px; grid-template-columns:minmax(0,1fr); place-items:center; align-content:start; min-width:0; padding:0; }
+#dates .days button span { grid-row:1; width:var(--day-size); height:var(--day-size); display:flex; align-items:center; justify-content:center; box-sizing:border-box; line-height:1; font-family:Arial,sans-serif; font-variant-numeric:tabular-nums; }
+#dates .days button:is(.range-start,.in-range,.range-end)::before { top:0; bottom:auto; height:var(--day-size); background:#e1efee; }
+#dates .days .night-rate { grid-row:2; }
+#dates .night-rate { position:relative; white-space:nowrap; font:500 clamp(9px,2.9cqw,11px)/1.2 Harmonia,Arial,sans-serif; color:var(--teal); }
