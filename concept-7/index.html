@@ -1,145 +1,28 @@
 <!doctype html>
 <html lang="ru">
-<head>
+<head><meta name="robots" content="noindex, nofollow, noarchive">
   <meta charset="utf-8">
-  <meta name="robots" content="noindex, nofollow, noarchive">
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no,address=no">
-  <title>Alean Family Olivia · Анапа, первая линия</title>
-  <meta name="description" content="Открытие летом 2027. Вид на море из каждого номера, «Ультра всё включено», дети до 15 лет бесплатно. Скидка 25% от 7 ночей">
-  <link rel="canonical" href="https://aleanolivia.ru/">
-  <meta property="og:title" content="Alean Family Olivia · Анапа, первая линия">
-  <meta property="og:description" content="Открытие летом 2027. Вид на море из каждого номера, «Ультра всё включено», дети до 15 лет бесплатно. Скидка 25% от 7 ночей">
-  <meta property="og:image" content="https://aleanolivia.ru/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Фасад курорта Alean Family Olivia">
-  <meta property="og:url" content="https://aleanolivia.ru/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ru_RU">
+  <title>Alean Family Olivia Concept 6</title>
   <link rel="preload" href="assets/facade.webp" as="image">
   <link rel="preload" href="assets/GoogleSans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css?v=hero-scroll">
-  <link rel="stylesheet" href="resort-sections.css?v=rooms-copy">
+  <link rel="stylesheet" href="resort-sections.css?v=suites-transition">
   <link rel="stylesheet" href="end-sections.css?v=2">
   <script defer src="vendor/gsap.min.js"></script>
   <script defer src="vendor/ScrollTrigger.min.js"></script>
   <script defer src="vendor/lenis.min.js"></script>
-  <script defer src="motion.js?v=booking-shortcut"></script>
+  <script defer src="motion.js?v=table-scroll"></script>
   <script defer src="hero-slider.js"></script>
-  <script defer src="booking-priced-base.js"></script>
-  <script defer src="resort-sections.js"></script>
-  <script defer src="olivia-goals.js?v=2"></script>
-  <script defer src="end-sections.js?v=goals1"></script>
+  <script defer src="booking.js"></script>
+  <script defer src="resort-sections.js?v=suites-transition"></script>
+  <script defer src="end-sections.js?v=callback"></script>
   <link rel="stylesheet" href="widget-adjust.css">
-  <script defer src="widget-adjust.js?v=dock1"></script>
-  <script defer src="booking-scroll.js?v=dock1"></script>
-  <script defer src="booking-priced-calendar.js"></script>
-  <style>
-    .room-render-note {
-      opacity: 0.5;
-      position: absolute;
-      z-index: 3;
-      left: 20px;
-      bottom: 20px;
-      color: white;
-      font-size: 12px;
-      line-height: 1.3;
-      pointer-events: none;
-    }
-    @media (min-width: 761px) {
-      .room-category:nth-child(odd) .room-render-note { left: auto; right: 20px; }
-    }
-    @media (max-width: 760px) {
-      .room-visual .room-pagination { bottom: 38px; }
-    }
-    .calendar-offer { margin:.5em 0; font-size:.9em; }
-    .callback-room { position:relative; }
-    .callback-room select {
-      appearance:none; display:block; box-sizing:border-box; width:100%; min-width:0;
-      height:auto; line-height:1.3; padding:0 1.5em var(--value-padding,1.25rem) 0;
-      border:0; border-bottom:1px solid #d3e1e8; border-radius:0;
-      background:transparent; color:var(--ink); cursor:pointer;
-    }
-    .callback-room select:has(option:checked[value=""]) { color:#79939a; }
-    .callback-room::after {
-      content:""; position:absolute; right:3px; bottom:calc(var(--value-padding,1.25rem) + .45em);
-      width:8px; height:8px; border:solid var(--teal); border-width:0 1.5px 1.5px 0;
-      transform:rotate(45deg); pointer-events:none;
-    }
-    .callback-room select:focus-visible { outline:none; border-color:var(--teal); box-shadow:0 1px var(--teal); }
-    @media(max-width:760px) { .callback-room { --value-padding:10px; } }
-    .booking-fields button[disabled] { opacity:1; cursor:default; }
-
-    #presale-note { background: white; color: var(--ink); padding: .45rem 2.5rem .9rem; font-size: 12px; line-height: 1.4; }
-    @media (max-width: 760px) { #presale-note { padding-inline: 16px; } }
-  </style>
-  <style>
-    .booking-shortcut {
-      position: fixed;
-      z-index: 9;
-      left: max(16px, 1.5rem, env(safe-area-inset-left));
-      bottom: max(16px, 1.5rem, env(safe-area-inset-bottom));
-      width: clamp(48px, 3.75rem, 64px);
-      background: #fafdfc;
-      border-color: #79939a;
-    }
-    .booking-shortcut svg { width: 44%; height: auto; stroke-width: 1.5; }
-    .booking-shortcut:focus-visible { outline: 2px solid var(--aqua); outline-offset: 3px; }
-  </style>
-
-
-  <link rel="stylesheet" href="dock.css?v=1">
-  <style>
-    .footer-company { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    .footer-company .belka { display:inline-flex; flex:none; opacity:.2; transition:opacity .3s ease; }
-    .footer-company .belka svg { width:30px; height:14px; }
-    .footer-company .belka:hover, .footer-company .belka:focus-visible { opacity:1; }
-  </style>
-<script type="text/javascript">     (function(m,e,t,r,i,k,a){         m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};         m[i].l=1*new Date();         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)     })(window, document,'script','https://mc.webvisor.org/metrika/tag_ww.js?id=114106194', 'ym');      ym(114106194, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true}); </script>
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
-
-    ym(89824445, 'init', {webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-  <style>
-    @media (min-width:761px) {
-      .header-row { display:grid; grid-template-columns:1fr auto 1fr; column-gap:1rem; }
-      .header-row .contact { justify-self:end; }
-    }
-    @media (max-width:760px) {
-      #header-nav { align-items:center; text-align:center; }
-    }
-    .slide-controls { top:calc(100dvh - var(--dock-height,80px) - clamp(16px,2vw,32px) - var(--control-height)); }
-  </style>
-  <style>
-@media (min-width:761px) {
-  .hero-copy {
-    --slider-clearance: calc(var(--dock-height,80px) + clamp(16px,2vw,32px) + 4.125rem + 20px);
-    translate: 0 min(0px, calc(100dvh - 36.85svh - var(--slider-clearance) - 100%));
-  }
-}
-@media (min-width:761px) and (min-aspect-ratio: 12/5) {
-  .hero-copy h1 { font-size:min(6.875rem,10svh); margin-bottom:16px; }
-  .hero-copy .action { height:min(4.5rem,8svh); }
-}
-  </style>
-  <link rel="stylesheet" href="offer-calendar-centered.css">
-  <script defer src="offer-dialog.js"></script>
+  <script defer src="widget-adjust.js"></script>
+  <script defer src="booking-scroll.js"></script>
 </head>
 <body>
-<noscript><div><img src="https://mc.yandex.ru/watch/89824445" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
 <header>
     <p class="opening-note">Открытие летом 2027<i aria-hidden="true"></i>Раннее бронирование открыто</p>
     <div class="header-row">
@@ -163,7 +46,7 @@
     <div class="hero-media"><div class="facade">
       <div class="slide-photo current"><img src="assets/facade.webp" alt="Фасад курорта Alean Family Olivia"></div>
       <div class="slide-photo" aria-hidden="true"><img src="assets/sea-balcony.webp" alt="Балкон номера с видом на море"></div>
-      <div class="slide-photo" aria-hidden="true"><img src="assets/kids-club-interior.jpg" alt="Пространство для детей и подростков"></div>
+      <div class="slide-photo" aria-hidden="true"><img src="assets/kids-club.webp" alt="Пространство для детей и подростков"></div>
     </div></div>
 
     <div class="hero-copy">
@@ -176,18 +59,15 @@
       <button type="button" data-location="От 34 до 108 м²" data-title="Номера с видом|на Чёрное море">Номера с видом на Чёрное море</button>
       <button type="button" data-location="Под разный возраст" data-title="Для детей|и подростков">Для детей и подростков</button>
     </div></div>
-    <div class="presale">
-      <aside id="presale" aria-label="Раннее бронирование">
+    <aside class="presale" id="presale" aria-label="Раннее бронирование">
       <div class="sale-card" data-wipe>
         <p class="season">Отдых в сезоне</p><p class="year">2027</p>
-        <ul><li><span>Дети до 15 лет живут бесплатно<small>На доп. месте, до 14 лет включительно</small></span></li><li>Все номера с видом на море</li><li>Ультра всё включено</li></ul>
+        <ul><li><span>Дети до 15 лет бесплатно<small>На доп. месте, до 14 лет включительно</small></span></li><li>Все номера с видом на море</li><li>Ультра всё включено</li></ul>
         <a href="#rooms" class="action dark"><span>Подобрать номер</span><img src="assets/key.svg" alt=""></a>
       </div>
     </aside>
-    </div>
     <figure class="room" data-wipe><img src="assets/bedroom.webp" alt="Номер с балконом и видом на море"></figure>
     <img class="brush" src="assets/brush.svg" alt="" data-wipe>
-
   </section>
   </div>
   <section class="about" aria-labelledby="about">
@@ -205,8 +85,8 @@
       <a class="thumb-link" href="#sea" data-wipe><span class="thumb-photo"><img src="assets/sea-balcony.webp" alt=""><img class="thumb-arrow" src="assets/feature-arrow.svg" alt=""></span><strong>Море</strong><small>1-ая линия</small></a>
     </div>
     <div class="stats">
-      <div class="stat grounds"><p style="column-gap:0"><b>1</b><span>-я линия</span></p><small>пляж первой категории перед курортом</small></div>
-      <div class="stat rooms"><p>Вид на море</p><small>из каждого номера</small></div>
+      <div class="stat grounds"><p><b>5</b><img class="stat-star" src="assets/stat-star.svg" alt=" звёзд"></p><small>первая береговая линия,<br> пляж первой категории</small></div>
+      <div class="stat rooms"><p><b>615</b></p><small>номеров с видом на море</small></div>
       <div class="stat children"><p>До <b>15</b> лет</p><small>дети живут бесплатно<br> на дополнительном месте</small></div>
       <div class="stat area"><p><b>24/7</b></p><small>питание и напитки по системе<br> «Ультра всё включено»</small></div>
     </div>
@@ -216,28 +96,28 @@
   <h2 class="eyebrow" id="season-offer-title" data-text><i></i>Раннее бронирование сезона 2027</h2>
   <div class="season-layout">
     <div class="season-price">
-      <p class="section-lead" data-text>Раннее бронирование</p>
-      <p class="display-price" data-text>Скидка 25%</p>
+      <p class="section-lead" data-text>Скидка при раннем бронировании</p>
+      <p class="display-price" data-text>-25%</p>
       <p>при бронировании от 7 ночей</p>
-      <button class="offer-terms-link" id="offer-terms-trigger" type="button" aria-haspopup="dialog" aria-controls="offer-dialog">Условия акции</button>
+      <a class="offer-terms-link" href="#early-booking-terms">Условия акции</a>
       <div class="offer-actions"><button class="action date-action" type="button" data-date-trigger aria-controls="dates" aria-expanded="false"><span>Выбрать даты</span></button><a class="action dark manager-action" href="tel:88002500030"><span>Подобрать с менеджером</span><img src="assets/season-headset.svg" alt=""></a></div>
       <p class="section-note" id="early-booking-terms">*Скидка при раннем бронировании действует до 31.12.2026</p>
     </div>
-    <div class="season-terms"><div><h3 data-text>Дети до 15 лет бесплатно</h3><p data-text>Если на дату заезда ребёнку ещё нет 15 лет. Действует вместе со скидкой на раннее бронирование.</p></div></div>
+    <div class="season-terms"><div><h3 data-text>Дети до 15 лет бесплатно</h3><p data-text>на дополнительном месте в номере (до 14 лет включительно)</p></div><div><h3 data-text>Предоплата 15%</h3><p data-text>остаток за 2 недели до заезда</p></div></div>
   </div>
 </section>
 <section class="accommodations" id="rooms" aria-label="Номера" tabindex="-1">
+  <div class="room-sequence room-sequence-standard"><div class="room-stage">
   <article class="room-category">
     <div class="room-details">
-      <p class="eyebrow" data-text><i></i>Из каждого номера видно море</p>
-      <h2 class="section-title" data-text>Делюкс</h2>
-      <div class="room-audience"><strong>Для пары или семьи с детьми</strong><p>Одна комната с дополнительными спальными местами для детей</p></div>
-      <ul class="room-amenities"><li><img src="assets/amenity-area.svg" alt="">34 м²</li><li>1 комната</li><li><img src="assets/amenity-guests.svg" alt="">до 4 гостей</li><li><img src="assets/amenity-balcony.svg" alt="">балкон</li></ul>
-      <p class="room-description">Большая кровать 180×200, для детей дополнительная кровать и диван. Есть кофемашина. Часть номеров оборудована для маломобильных гостей.</p>
+      <p class="eyebrow"><i></i>615 номеров, и из каждого видно море</p>
+      <h2 class="section-title">Делюкс</h2>
+      <ul class="room-amenities"><li><img src="assets/amenity-balcony.svg" alt="">Балкон</li><li><img src="assets/amenity-area.svg" alt="">34 м²</li><li><img src="assets/amenity-guests.svg" alt="">До 4 гостей</li></ul>
+      <div class="room-audience"><strong>Для пары или семьи с детьми</strong><p>Одна комната с дополнительными спальными местами для детей.</p></div>
       <div class="room-rate"><button class="action date-action" type="button" data-date-trigger aria-controls="dates" aria-expanded="false"><span>Выбрать даты</span></button></div>
     </div>
-    <figure class="room-visual" data-wipe aria-label="Фотографии номера «Делюкс»">
-      <div class="room-gallery-media" data-wipe-media>
+    <figure class="room-visual" aria-label="Фотографии номера «Делюкс»">
+      <div class="room-gallery-media">
         <img class="room-slide is-current" src="assets/gallery-deluxe-e80e78a51846ae.jpg" alt="Делюкс, фото 1" loading="lazy">
         <img class="room-slide" src="assets/gallery-deluxe-db5458c81d722f.jpg" alt="Делюкс, фото 2" loading="lazy" aria-hidden="true">
         <img class="room-slide" src="assets/gallery-deluxe-f99d98235649f6.jpg" alt="Делюкс, фото 3" loading="lazy" aria-hidden="true">
@@ -257,21 +137,19 @@
           </svg>
         </button>
       </div>
-      <figcaption class="room-render-note">Изображения: визуализация проекта</figcaption>
       <span class="room-photo-status" aria-live="polite"></span>
     </figure>
   </article>
   <article class="room-category">
     <div class="room-details">
 
-      <h2 class="section-title" data-text>Семейный двухкомнатный</h2>
-      <div class="room-audience"><strong>Для семьи с детьми</strong><p>Отдельная комната для детей и спальня для родителей</p></div>
-      <ul class="room-amenities"><li><img src="assets/amenity-area.svg" alt="">58 м²</li><li>2 комнаты</li><li><img src="assets/amenity-guests.svg" alt="">до 5 гостей</li><li><img src="assets/amenity-balcony.svg" alt="">балкон</li></ul>
-      <p class="room-description">В детской две кровати 100×200, в спальне родителей кровать 180×200. Есть гардеробная.</p>
+      <h2 class="section-title">Семейный двухкомнатный</h2>
+      <ul class="room-amenities"><li><img src="assets/amenity-balcony.svg" alt="">Балкон</li><li><img src="assets/amenity-area.svg" alt="">58 м²</li><li><img src="assets/amenity-guests.svg" alt="">До 5 гостей</li></ul>
+      <div class="room-audience"><strong>Для семьи с детьми</strong><p>Отдельная комната для детей и спальня для родителей.</p></div>
       <div class="room-rate"><button class="action date-action" type="button" data-date-trigger aria-controls="dates" aria-expanded="false"><span>Выбрать даты</span></button></div>
     </div>
-    <figure class="room-visual" data-wipe aria-label="Фотографии номера «Семейный двухкомнатный»">
-      <div class="room-gallery-media" data-wipe-media>
+    <figure class="room-visual" aria-label="Фотографии номера «Семейный двухкомнатный»">
+      <div class="room-gallery-media">
         <img class="room-slide is-current" src="assets/gallery-family-b2814d86d68903.jpg" alt="Семейный двухкомнатный, фото 1" loading="lazy">
         <img class="room-slide" src="assets/gallery-family-9e5428d8269cc8.jpg" alt="Семейный двухкомнатный, фото 2" loading="lazy" aria-hidden="true">
         <img class="room-slide" src="assets/gallery-family-59e9d7fe06e807.jpg" alt="Семейный двухкомнатный, фото 3" loading="lazy" aria-hidden="true">
@@ -295,32 +173,33 @@
           </svg>
         </button>
       </div>
-      <figcaption class="room-render-note">Изображения: визуализация проекта</figcaption>
       <span class="room-photo-status" aria-live="polite"></span>
     </figure>
   </article>
-  <section class="suite-section" aria-label="Люксы">
+  </div></div>
+  <section class="suite-section room-sequence room-sequence-suites" aria-label="Люксы"><div class="room-stage">
   <article class="room-category">
     <div class="room-details">
-      <p class="eyebrow suite-eyebrow" data-text><i></i>27 номеров для тех, кто хочет больше пространства и внимания</p>
-      <h2 class="section-title" data-text>Люкс с двумя спальнями</h2>
-      <div class="room-audience"><strong>Для большой семьи</strong><p>Можно поехать всей семьёй, с бабушками и дедушками: две спальни и общая кухня-гостиная</p></div>
-      <ul class="room-amenities"><li><img src="assets/amenity-area.svg" alt="">108 м²</li><li>3 комнаты</li><li><img src="assets/amenity-guests.svg" alt="">до 6 гостей</li><li><img src="assets/amenity-balcony.svg" alt="">балкон</li></ul>
-      <p class="room-description">В кухне-гостиной обеденный стол на четверых. Две ванные комнаты и гостевой санузел. Вечером номер подготовят ко сну.</p>
+      <p class="eyebrow suite-eyebrow"><i></i>27 люксов — больше пространства, больше комфорта</p>
+      <h2 class="section-title">Люкс с двумя спальнями</h2>
+      <ul class="room-amenities"><li><img src="assets/amenity-kitchen.svg" alt="">Кухня-гостиная</li><li><img src="assets/amenity-area.svg" alt="">108 м²</li><li><img src="assets/amenity-guests.svg" alt="">До 6 гостей</li></ul>
+      <div class="room-audience"><strong>Для большой семьи</strong><p>Для отдыха с детьми, бабушками и дедушками: две спальни и общая кухня-гостиная.</p></div>
       <div class="room-rate"><button class="action date-action" type="button" data-date-trigger aria-controls="dates" aria-expanded="false"><span>Выбрать даты</span></button></div>
     </div>
-    <figure class="room-visual" data-wipe aria-label="Фотографии номера «Люкс с двумя спальнями»">
-      <div class="room-gallery-media" data-wipe-media>
+    <figure class="room-visual" aria-label="Фотографии номера «Люкс с двумя спальнями»">
+      <div class="room-gallery-media">
         <img class="room-slide is-current" src="assets/gallery-suite-704ef52e01ef1f.jpg" alt="Люкс с двумя спальнями, фото 1" loading="lazy">
-        <img class="room-slide" src="assets/gallery-suite-677c1c65997864.jpg" alt="Люкс с двумя спальнями, фото 2" loading="lazy" aria-hidden="true">
-        <img class="room-slide" src="assets/gallery-suite-fb5fef42a1d753.jpg" alt="Люкс с двумя спальнями, фото 3" loading="lazy" aria-hidden="true">
-        <img class="room-slide" src="assets/gallery-suite-2b782779623746.jpg" alt="Люкс с двумя спальнями, фото 4" loading="lazy" aria-hidden="true">
-        <img class="room-slide" src="assets/gallery-suite-6785ca8a7c3b7d.jpg" alt="Люкс с двумя спальнями, фото 5" loading="lazy" aria-hidden="true">
-        <img class="room-slide" src="assets/gallery-suite-582d52d5a7f597.jpg" alt="Люкс с двумя спальнями, фото 6" loading="lazy" aria-hidden="true">
-        <img class="room-slide" src="assets/gallery-suite-e4a272005ce187.jpg" alt="Люкс с двумя спальнями, фото 7" loading="lazy" aria-hidden="true">
-        <img class="room-slide" src="assets/gallery-suite-3f52cfbf169790.jpg" alt="Люкс с двумя спальнями, фото 8" loading="lazy" aria-hidden="true">
-        <img class="room-slide" src="assets/gallery-suite-6c1960049d2ba4.jpg" alt="Люкс с двумя спальнями, фото 9" loading="lazy" aria-hidden="true">
-        <img class="room-slide" src="assets/gallery-suite-74baebc6c9fac3.jpg" alt="Люкс с двумя спальнями, фото 10" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-02b01cd0b769b2.jpg" alt="Люкс с двумя спальнями, фото 2" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-677c1c65997864.jpg" alt="Люкс с двумя спальнями, фото 3" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-f013ff47a54816.jpg" alt="Люкс с двумя спальнями, фото 4" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-fb5fef42a1d753.jpg" alt="Люкс с двумя спальнями, фото 5" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-2b782779623746.jpg" alt="Люкс с двумя спальнями, фото 6" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-6785ca8a7c3b7d.jpg" alt="Люкс с двумя спальнями, фото 7" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-582d52d5a7f597.jpg" alt="Люкс с двумя спальнями, фото 8" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-e4a272005ce187.jpg" alt="Люкс с двумя спальнями, фото 9" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-3f52cfbf169790.jpg" alt="Люкс с двумя спальнями, фото 10" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-6c1960049d2ba4.jpg" alt="Люкс с двумя спальнями, фото 11" loading="lazy" aria-hidden="true">
+        <img class="room-slide" src="assets/gallery-suite-74baebc6c9fac3.jpg" alt="Люкс с двумя спальнями, фото 12" loading="lazy" aria-hidden="true">
       </div>
       <span class="room-photo-badge">Кухня-гостиная для всей семьи</span>
       <div class="room-gallery-controls" role="group" aria-label="Переключение фото номера «Люкс с двумя спальнями»">
@@ -335,20 +214,18 @@
           </svg>
         </button>
       </div>
-      <figcaption class="room-render-note">Изображения: визуализация проекта</figcaption>
       <span class="room-photo-status" aria-live="polite"></span>
     </figure>
   </article>
   <article class="room-category room-category-duplex">
     <div class="room-details">
-      <h2 class="section-title" data-text>Двухуровневый люкс</h2>
-      <div class="room-audience"><strong>Для семьи, которой важны простор и терраса</strong><p>Спальни наверху, гостиная и кухня-столовая внизу, а с террасы можно сразу спуститься к бассейну</p></div>
-      <ul class="room-amenities"><li><img src="assets/amenity-area.svg" alt="">100 м²</li><li>3 комнаты на двух уровнях</li><li><img src="assets/amenity-guests.svg" alt="">до 6 гостей</li><li><img src="assets/amenity-terrace.svg" alt="">терраса</li></ul>
-      <p class="room-description">Стол в кухне-столовой рассчитан на шестерых. На террасе лежаки, у спален балкон. Две ванные комнаты, вечером номер подготовят ко сну. Бассейн общий для семи номеров, в высокий сезон его подогревают.</p>
+      <h2 class="section-title">Двухуровневый люкс</h2>
+      <ul class="room-amenities"><li><img src="assets/amenity-terrace.svg" alt="">Терраса с выходом к бассейну</li><li><img src="assets/amenity-area.svg" alt="">100 м²</li><li><img src="assets/amenity-guests.svg" alt="">До 6 гостей</li></ul>
+      <div class="room-audience"><strong>Для семьи, которой важны простор и терраса</strong><p>Две спальни наверху, гостиная и кухня-столовая внизу. Выход к бассейну, общему для 7 номеров.</p></div>
       <div class="room-rate"><button class="action date-action" type="button" data-date-trigger aria-controls="dates" aria-expanded="false"><span>Выбрать даты</span></button></div>
     </div>
-    <figure class="room-visual" data-wipe aria-label="Фотографии номера «Двухуровневый люкс»">
-      <div class="room-gallery-media" data-wipe-media>
+    <figure class="room-visual" aria-label="Фотографии номера «Двухуровневый люкс»">
+      <div class="room-gallery-media">
         <img class="room-slide is-current" src="assets/gallery-duplex-5896c21bbe7ea8.jpg" alt="Двухуровневый люкс, фото 1" loading="lazy">
         <img class="room-slide" src="assets/gallery-duplex-8914f748427343.jpg" alt="Двухуровневый люкс, фото 2" loading="lazy" aria-hidden="true">
         <img class="room-slide" src="assets/gallery-duplex-98fa30a1a44f58.jpg" alt="Двухуровневый люкс, фото 3" loading="lazy" aria-hidden="true">
@@ -372,11 +249,10 @@
           </svg>
         </button>
       </div>
-      <figcaption class="room-render-note">Изображения: визуализация проекта</figcaption>
       <span class="room-photo-status" aria-live="polite"></span>
     </figure>
   </article>
-  </section>
+  </div></section>
   <section class="room-comparison" aria-labelledby="room-comparison-title">
     <div class="room-table-scroll" role="region" aria-label="Таблица сравнения номеров" tabindex="0">
       <div class="room-table-canvas">
@@ -385,25 +261,25 @@
           <thead><tr><th scope="col"><h2 id="room-comparison-title">Сравнить<br> номера</h2></th><th scope="col"><img src="assets/compare-deluxe.png" alt="" loading="lazy">Делюкс</th><th scope="col"><img src="assets/compare-family.png" alt="" loading="lazy">Семейный двухкомнатный</th><th scope="col"><img src="assets/compare-suite.png" alt="" loading="lazy">Люкс с двумя спальнями</th><th scope="col"><img src="assets/compare-duplex.png" alt="" loading="lazy">Двухуровневый люкс</th></tr></thead>
           <tbody>
           <tr><th scope="row">Площадь</th><td>34 м²</td><td>58 м²</td><td>108 м²</td><td>100 м²</td></tr>
-          <tr><th scope="row">Комнаты и спальни</th><td>1 комната</td><td>2 комнаты: спальня и детская</td><td>3 комнаты: 2 спальни и кухня-гостиная</td><td>3 комнаты на двух уровнях: 2 спальни наверху, гостиная с кухней-столовой внизу</td></tr>
-          <tr><th scope="row">Гостей</th><td>до 4</td><td>до 5</td><td>до 6</td><td>до 6</td></tr>
-          <tr><th scope="row">Спальные места</th><td>кровать 180×200; доп.: кровать 100×200, диван</td><td>кровать 180×200, две кровати 100×200; доп.: диван</td><td>кровать 180×200, две кровати 100×200; доп.: два дивана</td><td>кровать 180×200, две кровати 100×200; доп.: два дивана</td></tr>
+          <tr><th scope="row">Комнаты</th><td>1</td><td>2</td><td>3</td><td>3 на двух уровнях</td></tr>
+          <tr><th scope="row">Гостей</th><td>До 4</td><td>До 5</td><td>До 6</td><td>До 6</td></tr>
+          <tr><th scope="row">Спальные места</th><td>Кровать 180×200, дополнительная кровать 100×200, диван</td><td>Кровать 180×200, две кровати 100×200, дополнительный диван</td><td>Кровать 180×200, две кровати 100×200, два дополнительных дивана</td><td>Кровать 180×200, две кровати 100×200, два дополнительных дивана</td></tr>
           <tr><th scope="row">Ванные</th><td>1</td><td>1</td><td>2 и гостевой санузел</td><td>2</td></tr>
-          <tr><th scope="row">Кухня</th><td>нет</td><td>нет</td><td>кухня-гостиная, стол на 4</td><td>кухня-столовая, стол на 6</td></tr>
-          <tr><th scope="row">Гардеробная</th><td>нет</td><td>есть</td><td>нет</td><td>нет</td></tr>
-          <tr><th scope="row">Балкон или терраса</th><td>балкон</td><td>балкон</td><td>балкон</td><td>терраса у бассейна и балкон</td></tr>
-          <tr><th scope="row">Вечерний сервис</th><td>нет</td><td>нет</td><td>есть</td><td>есть</td></tr>
-          <tr><th scope="row">Вид на море</th><td>есть</td><td>есть</td><td>есть</td><td>есть</td></tr>
+          <tr><th scope="row">Кухня</th><td><span class="compare-symbol" aria-label="Нет">−</span></td><td><span class="compare-symbol" aria-label="Нет">−</span></td><td>Кухня-гостиная, стол на 4</td><td>Кухня-столовая, стол на 6</td></tr>
+          <tr><th scope="row">Гардеробная</th><td><span class="compare-symbol" aria-label="Нет">−</span></td><td><span class="compare-symbol" aria-label="Есть">+</span></td><td><span class="compare-symbol" aria-label="Нет">−</span></td><td><span class="compare-symbol" aria-label="Нет">−</span></td></tr>
+          <tr><th scope="row">Балкон или терраса</th><td>Балкон</td><td>Балкон</td><td>Балкон</td><td>Терраса у бассейна и балкон</td></tr>
+          <tr><th scope="row">Вечерний сервис</th><td><span class="compare-symbol" aria-label="Нет">−</span></td><td><span class="compare-symbol" aria-label="Нет">−</span></td><td><span class="compare-symbol" aria-label="Есть">+</span></td><td><span class="compare-symbol" aria-label="Есть">+</span></td></tr>
+          <tr><th scope="row">Вид на море</th><td><span class="compare-symbol" aria-label="Есть">+</span></td><td><span class="compare-symbol" aria-label="Есть">+</span></td><td><span class="compare-symbol" aria-label="Есть">+</span></td><td><span class="compare-symbol" aria-label="Есть">+</span></td></tr>
           </tbody>
         </table>
       </div>
     </div>
-    <p class="section-note">* Заезд с 15:00, выезд до 12:00. Дети до 15 лет живут бесплатно на дополнительном месте. С 15 лет: 20% от стоимости номера.</p>
+    <p class="section-note">* Площадь указана без балкона. Дети до 15 лет на дополнительном месте размещаются бесплатно, гость от 15 лет — 20% от стоимости номера.</p>
   </section>
 </section>
 <section class="dining-section" id="inclusive" aria-labelledby="dining-title">
   <div class="dining-header">
-    <div><h2 class="section-title" id="dining-title" data-text>Все для семейного отдыха включено</h2><p class="section-lead" data-text>Еда и напитки доступны круглые сутки. В стоимость входят и акватермальный комплекс, бассейны, развлечения для детей и взрослых.</p></div>
+    <div><h2 class="section-title" id="dining-title" data-text>Ультра всё включено</h2><p class="section-lead" data-text>Еда и напитки включены круглые сутки</p></div>
     <div class="dining-controls"><button class="circle-action" type="button" data-dining-step="-1" aria-label="Предыдущая карточка" aria-controls="dining-track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><button class="circle-action" type="button" data-dining-step="1" aria-label="Следующая карточка" aria-controls="dining-track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div>
   </div>
   <div class="dining-viewport">
@@ -416,17 +292,6 @@
         <img class="dining-art" src="assets/dining-olivia-art.svg" alt="">
       </div>
       <button class="circle-action dining-toggle" type="button" aria-label="Подробнее: Оливия" aria-controls="dining-olivia-info" aria-expanded="false">
-        <span class="dining-symbol" aria-hidden="true"></span>
-      </button>
-    </article>
-    <article class="dining-card" data-wipe>
-      <img class="dining-photo" src="assets/dining-vine.webp" alt="" loading="lazy">
-      <div class="dining-cover"><h3>Лоза у моря</h3><p>Авторская кухня и вино</p></div>
-      <div class="dining-info" id="dining-vine-info" aria-hidden="true">
-        <div class="dining-info-copy"><h3>Лоза у моря</h3><p>Сет-меню с обслуживанием официантами с 11:00 до 23:00. Устрицы и дегустационные сеты за доплату</p></div>
-        <img class="dining-art" src="assets/dining-vine-art.svg" alt="">
-      </div>
-      <button class="circle-action dining-toggle" type="button" aria-label="Подробнее: Лоза у моря" aria-controls="dining-vine-info" aria-expanded="false">
         <span class="dining-symbol" aria-hidden="true"></span>
       </button>
     </article>
@@ -444,12 +309,23 @@
     </article>
     <article class="dining-card" data-wipe>
       <img class="dining-photo" src="assets/dining-children.webp" alt="" loading="lazy">
-      <div class="dining-cover"><h3>Детям</h3><p>Детская линия для 0–3 и 4–7 лет</p></div>
+      <div class="dining-cover"><h3>Детям</h3><p>Детская линия для 0-3 и 4-7 лет</p></div>
       <div class="dining-info" id="dining-children-info" aria-hidden="true">
         <div class="dining-info-copy"><h3>Детям</h3><p>Смеси, каши, пюре, подогреватели и стерилизаторы для бутылочек</p></div>
         <img class="dining-art" src="assets/dining-children-art.svg" alt="">
       </div>
       <button class="circle-action dining-toggle" type="button" aria-label="Подробнее: Детям" aria-controls="dining-children-info" aria-expanded="false">
+        <span class="dining-symbol" aria-hidden="true"></span>
+      </button>
+    </article>
+    <article class="dining-card" data-wipe>
+      <img class="dining-photo" src="assets/dining-vine.webp" alt="" loading="lazy">
+      <div class="dining-cover"><h3>Лоза у моря</h3><p>Авторская кухня и вино</p></div>
+      <div class="dining-info" id="dining-vine-info" aria-hidden="true">
+        <div class="dining-info-copy"><h3>Лоза у моря</h3><p>Сет-меню с обслуживанием официантами с 11:00 до 23:00. Устрицы и дегустационные сеты за доплату</p></div>
+        <img class="dining-art" src="assets/dining-vine-art.svg" alt="">
+      </div>
+      <button class="circle-action dining-toggle" type="button" aria-label="Подробнее: Лоза у моря" aria-controls="dining-vine-info" aria-expanded="false">
         <span class="dining-symbol" aria-hidden="true"></span>
       </button>
     </article>
@@ -465,7 +341,7 @@
       </button>
     </article>
     <article class="dining-card" data-wipe>
-      <img class="dining-photo" src="assets/night-club-interior.jpg" alt="" loading="lazy">
+      <img class="dining-photo" src="assets/dining-night.webp" alt="" loading="lazy">
       <div class="dining-cover"><h3>Ночью</h3><p>С полуночи до 7:30</p></div>
       <div class="dining-info" id="dining-night-info" aria-hidden="true">
         <div class="dining-info-copy"><h3>Ночью</h3><p>С полуночи до 7:30 в лаунж-баре чай, кофе, сэндвичи и детское питание</p></div>
@@ -485,43 +361,60 @@
   <div class="kids-layout">
     <div class="kids-program">
       <div class="kids-tabs" role="tablist" aria-label="Возраст ребёнка">
-        <button type="button" role="tab" id="kids-tab-1" aria-selected="true" aria-controls="kids-panel-1" tabindex="0"><img src="assets/kids-tab-1.webp" alt="">1–3 года</button><button type="button" role="tab" id="kids-tab-2" aria-selected="false" aria-controls="kids-panel-2" tabindex="-1"><img src="assets/kids-tab-2.webp" alt="">4–12 лет</button><button type="button" role="tab" id="kids-tab-3" aria-selected="false" aria-controls="kids-panel-3" tabindex="-1"><img src="assets/kids-tab-3.webp" alt="">13+ лет</button>
+        <button type="button" role="tab" id="kids-tab-1" aria-selected="true" aria-controls="kids-panel-1" tabindex="0"><img src="assets/kids-tab-1.webp" alt="">1-3 года</button><button type="button" role="tab" id="kids-tab-2" aria-selected="false" aria-controls="kids-panel-2" tabindex="-1"><img src="assets/kids-tab-2.webp" alt="">4-12 лет</button><button type="button" role="tab" id="kids-tab-3" aria-selected="false" aria-controls="kids-panel-3" tabindex="-1"><img src="assets/kids-tab-3.webp" alt="">13+ лет</button>
         <span class="kids-tab-line" aria-hidden="true"></span>
       </div>
       <div class="kids-wave-window" aria-hidden="true"><img class="kids-waves" src="assets/kids-waves.svg" alt=""></div>
       <div class="kids-panels">
       <div class="kids-panel" role="tabpanel" id="kids-panel-1" aria-labelledby="kids-tab-1">
-        <div class="kids-age"><p class="display-price" data-text>1–3</p><p>Мини-клуб в Вики Чики: комната для игр и творчества. Ребёнка можно оставить под присмотром педагога с 10:00 до 22:00, услуга за доплату.</p></div>
+        <div class="kids-age"><p class="display-price" data-text>1-3</p><p data-text>мини-клуб в Вики Чики,<br> можно оставить с педагогом</p></div>
         <figure class="kids-photo" data-wipe><img src="assets/kids-toddler.webp" alt="Клуб для детей 1-3 года" loading="lazy"></figure>
       </div><div class="kids-panel" role="tabpanel" id="kids-panel-2" aria-labelledby="kids-tab-2" hidden>
-        <div class="kids-age"><p class="display-price">4–12</p><p>Детский клуб Вики Чики с 10:00 до 23:00: комната интерактивных игр, Эврика (студия опытов и исследований), детский кинотеатр, игровая терраса. Для активных: батутный центр и полоса «Ниндзя».</p></div>
+        <div class="kids-age"><p class="display-price">4-12</p><p>Вики Чики: интерактивные игры,<br> кинотеатр, игровая терраса,<br> студия опытов Эврика</p></div>
         <figure class="kids-photo"><img src="assets/kids-school.webp" alt="Клуб для детей 4-12 лет" loading="lazy"></figure>
       </div><div class="kids-panel" role="tabpanel" id="kids-panel-3" aria-labelledby="kids-tab-3" hidden>
-        <div class="kids-age"><p class="display-price">13+</p><p>Клуб для подростков Свобода с 11:00 до 00:00: игровые автоматы и настольные игры. Рядом VR-клуб Погружение, Перезагрузка с компьютерами и игровыми приставками, турниры в Игротеке.</p></div>
+        <div class="kids-age"><p class="display-price">13+</p><p>Свобода: клуб для подростков, Погружение (VR), Перезагрузка (приставки)</p></div>
         <figure class="kids-photo"><img src="assets/kids-teen.webp" alt="Клуб для детей 13+ лет" loading="lazy"></figure>
       </div>
       </div>
     </div>
     <div class="kids-shared">
-      <h3 data-text>Для всех:</h3><ul class="dash-list" data-wipe><li>Кадр, академия кино</li><li>Голос, студия звукозаписи</li><li>Синяя птица, арт-студия</li><li>Шеф и Ко, кулинарная мастерская</li><li>Улица мастеров, творческие мастерские</li><li>Академия спорта, занятия с тренерами</li><li>Игротека, настольные и подвижные игры</li></ul>
+      <h3 data-text>Для всех:</h3><ul class="dash-list" data-wipe><li>Академия телевидения</li><li>Арт-студия Синяя птица</li><li>Кулинарная студия Шеф и Ко</li><li>Игротека</li><li>Батутный центр</li></ul>
       <h3 data-text>Каждый вечер:</h3>
       <ul class="kids-schedule" data-wipe><li><time>19:30</time><span>мини-диско</span></li><li><time>20:30</time><span>семейное шоу</span></li><li><time>21:30</time><span>дискотека</span></li><li><time>22:30</time><span>игры и караоке</span></li></ul>
     </div>
   </div>
 </section>
 <section class="sea-section" id="sea" aria-labelledby="sea-title" tabindex="-1">
-  <h2 class="section-title" id="sea-title" data-text>Первая линия, собственный пляж и бассейны с подогревом</h2>
+  <h2 class="section-title" id="sea-title" data-text>Своё море и тёплая<br> вода в любую погоду</h2>
   <div class="sea-features">
     <div><h3 data-text>Пляж</h3><p data-text>Первая береговая линия, пляж первой категории. 850 шезлонгов под зонтами, беседки, спасатели, медпост. Сапы, каяки, верёвочный парк, лазертаг.</p></div>
     <div id="open-pools" tabindex="-1"><h3 data-text>Открытые бассейны</h3><p data-text>Плавательный бассейн 1 658 м²,<br> детский аква-плей и анимационный<br> бассейн. Вода от +30 °C</p></div>
-    <div><h3 data-text>Акватермальный комплекс</h3><p data-text>Бассейны, бани и сауны: крытый бассейн с выплывом на улицу, русская баня, финская и травяная сауны, парная, хаммам, снежный грот, соляная пещера. Работает круглый год.</p></div>
+    <div><h3 data-text>Акватермальный комплекс</h3><p data-text>Крытый бассейн с выплывом на улицу,<br> русская баня, финская и травяная сауны, хаммам, снежный грот, соляная пещера. Работает круглый год.</p></div>
   </div>
   <div class="sea-visual">
     <figure data-wipe><img src="assets/indoor-waterpark.jpg" alt="Крытый бассейн аквапарка" loading="lazy"></figure>
     <div class="waterpark-badge" data-wipe><img src="assets/sea-waterpark.webp" alt=""><div><strong>Крытый аквапарк 3 400 м²</strong><small>откроется в сентябре 2027</small></div></div>
   </div>
 </section>
-
+<section class="booking" id="booking" aria-labelledby="booking-title">
+    <h2 id="booking-title" class="section-title" data-text>Забронируйте номер прямо сейчас</h2>
+    <div class="booking-panel" data-wipe>
+      <div class="booking-fields">
+        <button class="field" type="button" aria-controls="hotels" aria-expanded="false">
+          <span class="field-label">Отель</span><span class="field-value"><span data-roll>Выбрать отель</span><svg viewBox="0 0 20 16" aria-hidden="true"><path d="m1 5 9 8 9-8"/></svg></span>
+        </button>
+        <button class="field" type="button" aria-controls="dates" aria-expanded="false">
+          <span class="field-label">Дата заезда и выезда</span><span class="field-value"><span data-roll>Выбрать даты</span><svg class="picker-icon" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M25 20.9323C22.7535 20.9323 20.9322 19.1111 20.9322 16.8645V3.03394H1V16.8645C1 19.1111 2.82121 20.9323 5.0678 20.9323H25Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/><path d="M1 9.13574H20.9322" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/><path d="M1 16.8645V25.0001H20.9322V20.9323" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/><path d="M5 6L5 0" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/><path d="M17 6L17 0" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/></svg></span>
+        </button>
+        <button class="field" type="button" aria-controls="guests" aria-expanded="false">
+          <span class="field-label">Размещение</span><span class="field-value"><span data-roll>Выбрать гостей</span><svg class="picker-icon" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M11.1693 9.11858C11.1693 10.8035 9.80348 12.1694 8.11849 12.1694C6.43355 12.1694 5.06763 10.8035 5.06763 9.11858C5.06763 7.43364 6.43355 6.06773 8.11849 6.06773C9.80348 6.06773 11.1693 7.43364 11.1693 9.11858Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M8.11873 16.2372C4.18718 16.2372 1 19.4243 1 23.3559V24.3728H15.2373V23.3559C15.2373 19.4243 12.0502 16.2372 8.11873 16.2372Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M20.9323 5.05095C20.9323 6.73589 19.5664 8.10181 17.8814 8.10181C16.1965 8.10181 14.8306 6.73589 14.8306 5.05095C14.8306 3.36602 16.1965 2.0001 17.8814 2.0001C19.5664 2.0001 20.9323 3.36602 20.9323 5.05095Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M18.4755 20.3049H25V19.288C25 15.3564 21.8129 12.1693 17.8814 12.1693C16.193 12.1693 14.642 12.7571 13.4216 13.7391" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg></span>
+        </button>
+        <label class="field promo"><span class="field-label">Промокод</span><span class="promo-control"><input class="field-value" type="text" name="promo" placeholder="Введите промокод" autocomplete="off"><span class="field-value promo-roll" aria-hidden="true"></span></span></label>
+      </div>
+      <button class="search-rooms" type="button" aria-disabled="true"><span>Найти номер</span></button>
+    </div>
+  </section>
 <section class="faq-section" id="faq" aria-labelledby="faq-title">
   <h2 class="section-title" id="faq-title" data-text>Частые вопросы</h2>
   <div class="faq-list" data-wipe>
@@ -531,7 +424,7 @@
     </details>
     <details class="faq-item" name="resort-faq">
       <summary><span>Как размещаются дети?</span><span class="circle-action faq-toggle" aria-hidden="true"><span class="dining-symbol"></span></span></summary>
-      <p>Ребёнок живёт бесплатно на дополнительном месте, если на дату заезда ему ещё нет 15 лет. С 15 лет: 20% от стоимости номера.</p>
+      <p>Дети до 15 лет (до 14 лет включительно) живут бесплатно на дополнительном месте. Гость от 15 лет на дополнительном месте: 20% от стоимости номера.</p>
     </details>
     <details class="faq-item" name="resort-faq">
       <summary><span>Что входит в «Ультра всё включено»?</span><span class="circle-action faq-toggle" aria-hidden="true"><span class="dining-symbol"></span></span></summary>
@@ -546,63 +439,36 @@
       <p>Крытый аквапарк откроется в сентябре 2027. До этого работают открытые подогреваемые бассейны и бассейн акватермального комплекса.</p>
     </details>
     
-    <details class="faq-item" name="resort-faq">
-      <summary><span>Какие условия раннего бронирования?</span><span class="circle-action faq-toggle" aria-hidden="true"><span class="dining-symbol"></span></span></summary>
-      <p>При бронировании от 7 ночей до 31.12.2026 действует скидка 25%.</p>
-    </details>
-    <details class="faq-item" name="resort-faq">
-      <summary><span>Можно ли оставить ребёнка в клубе без родителей?</span><span class="circle-action faq-toggle" aria-hidden="true"><span class="dining-symbol"></span></span></summary>
-      <p>В мини-клубе Вики Чики ребёнка 1–3 лет можно оставить под присмотром педагога с 10:00 до 22:00. Услуга за доплату.</p>
-    </details>
-    <details class="faq-item" name="resort-faq">
-      <summary><span>Во сколько заезд и выезд?</span><span class="circle-action faq-toggle" aria-hidden="true"><span class="dining-symbol"></span></span></summary>
-      <p>Заезд с 15:00, выезд до 12:00.</p>
-    </details>
   </div>
 </section>
 <section class="callback-section" id="callback" aria-labelledby="callback-title">
   <div class="callback-copy">
     <div class="callback-intro">
       <h2 class="section-title" id="callback-title" data-text>Подберём номер<br> под вашу семью</h2>
-      <p data-text>Перезвоним в течение 2 часов. Менеджер уточнит возраст детей и даты,<br> предложит номер и расскажет об условиях раннего бронирования</p>
+      <p data-text>Менеджер позвонит, уточнит возраст детей и даты,<br> предложит номер и расскажет об условиях раннего бронирования</p>
     </div>
     <div class="callback-channel">
       <h3 class="section-lead" data-text>Не готовы решать сейчас?</h3>
       <p data-text>Подпишитесь на канал Alean Family Olivia в MAX</p>
-      <a class="action dark callback-max-action" href="https://max.ru/id2301114870_biz2" target="_blank" rel="noopener"><span>Перейти в MAX</span><img src="assets/callback-max.svg" alt=""></a>
+      <span class="action dark callback-max-action" role="link" aria-disabled="true" tabindex="0"><span>Перейти в Max</span><img src="assets/callback-max.svg" alt=""></span>
     </div>
     <div class="callback-visual">
       <figure data-wipe><img src="assets/callback-room.webp" alt="Номер с видом на море" loading="lazy"></figure>
       <img class="callback-brush" src="assets/callback-brush.svg" alt="" data-wipe>
     </div>
   </div>
-  <form class="callback-form" method="post" action="callback.php" data-wipe aria-label="Перезвонить гостю">
+  <form class="callback-form" method="post" action="callback.php" data-wipe aria-label="Подбор номера">
     <label class="field promo"><span class="field-label">Имя</span><span class="promo-control"><input class="field-value" name="name" autocomplete="given-name" placeholder="Иван" required><span class="field-value promo-roll" aria-hidden="true"></span></span></label>
     <label class="field promo"><span class="field-label">Телефон</span><span class="promo-control"><input class="field-value" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required><span class="field-value promo-roll" aria-hidden="true"></span></span></label>
-    <label class="field callback-room"><span class="field-label">Номер</span><select class="field-value" name="room"><option value="">Помогите выбрать</option><option>Делюкс</option><option>Семейный двухкомнатный</option><option>Люкс с двумя спальнями</option><option>Двухуровневый люкс</option></select></label>
+    <button class="field filled" type="button" aria-controls="callback-methods" aria-expanded="false">
+      <span class="field-label">Как связаться</span><span class="field-value"><span data-roll>Звонок</span><svg viewBox="0 0 20 16" aria-hidden="true"><path d="m1 5 9 8 9-8"/></svg></span>
+    </button>
     <input name="contact" type="hidden" value="Звонок">
     <button class="action date-action" type="button" data-callback-submit><span>Отправить заявку</span></button>
-    <label class="callback-consent"><input name="consent" type="checkbox" required><span>Я согласен(а) на обработку персональных данных в соответствии с <a href="documents/politika-obrabotki-personalnykh-dannykh-v6.pdf" target="_blank" rel="noopener">Политикой обработки персональных данных</a></span></label>
-    <p class="callback-status" role="status" hidden>Заявка не отправлена. Связаться с нами: <a href="tel:88002500030">8 (800) 250 00 30</a></p>
+    <label class="callback-consent"><input name="consent" type="checkbox" required><span>Я согласен(а) на обработку <a aria-disabled="true">Персональных данных</a> по <a aria-disabled="true">Политике конфиденциальности</a></span></label>
+    <p class="callback-status" role="status" hidden>Заявка не отправлена. Связаться с менеджером можно по телефону <a href="tel:88002500030">8 (800) 250 00 30</a>.</p>
   </form>
 </section>
-<dialog id="offer-dialog" aria-labelledby="offer-dialog-title" data-lenis-prevent>
-  <div class="offer-dialog-head">
-    <h2 id="offer-dialog-title">Условия спецпредложения</h2>
-    <form method="dialog"><button class="circle-action offer-close" aria-label="Закрыть" autofocus><span class="dining-symbol" aria-hidden="true"></span></button></form>
-  </div>
-  <ul>
-    <li>Период действия акции: с 10.11.2026 до 31.12.2026;</li>
-    <li>Период проживания по акции: с 05.06.2027 до 17.10.2027;</li>
-    <li>Предоплата должна быть внесена в течение 15 минут при бронировании на сайте или в течение 2 рабочих дней при бронировании по телефону, но не позднее 1-х суток до даты заезда;</li>
-    <li>Акция не действует на заезды длительностью менее 7-ми суток;</li>
-    <li>При изменении периода проживания применяются цены, действующие на момент внесения изменений;</li>
-    <li>Суммируется с акцией: «Дети до 15 лет бесплатно».</li>
-    <li>Акция действует для частных лиц и туристических компаний за исключением корпоративных клиентов и MICE;</li>
-    <li>Отель оставляет за собой право прекратить действие акции в любой момент;</li>
-    <li>Акция действует на все категории номеров.</li>
-  </ul>
-</dialog>
 </main>
 <footer class="site-footer">
   <div class="footer-brand">
@@ -611,31 +477,30 @@
     <div class="footer-top">
       <a href="#top" class="footer-logo" aria-label="Alean Family Olivia, к началу страницы"><img src="assets/logo.svg" alt=""></a>
       <nav class="footer-nav" aria-label="Навигация в подвале">
-        <a href="#rooms">Номера</a><a href="#inclusive">Ультра всё включено</a><a href="#children">Детям</a><a href="#season-offer">Раннее бронирование</a>
+        <a href="#rooms">Номера</a><a href="#inclusive">Ультра всё включено</a><a href="#children">Детям</a><a href="#sea">Море</a><a href="#season-offer">Раннее бронирование</a>
       </nav>
     </div>
     <div class="footer-legal">
-      <p>Курорт работает под управлением гостиничного оператора Alean Collection</p>
-      <div class="footer-docs"><a href="documents/politika-obrabotki-personalnykh-dannykh-v6.pdf" target="_blank" rel="noopener">Политика обработки персональных данных</a><a href="documents/dogovor-publichnoy-oferty.pdf" target="_blank" rel="noopener">Правила бронирования и отмены (публичная оферта)</a><a href="documents/zayavlenie-na-vozvrat-po-rekvizitam.docx" download>Заявление на возврат по реквизитам</a><a href="documents/zayavlenie-na-vozvrat-karta-ili-sbp.docx" download>Заявление на возврат при оплате на сайте картой или через СБП</a><a href="documents/polzovatelskoe-soglashenie-v1.pdf" target="_blank" rel="noopener">Пользовательское соглашение</a><a href="documents/soglasie-na-obrabotku-dannykh-programma-loyalnosti.pdf" target="_blank" rel="noopener">Согласие на обработку данных для участия в программе лояльности</a></div>
+      <p>*Курорт работает под управлением гостиничного оператора Alean Collection</p>
+      <div class="footer-docs"><span role="link" aria-disabled="true" tabindex="0">Политика обработки персональных данных</span><span role="link" aria-disabled="true" tabindex="0">Правила бронирования и отмены</span></div>
     </div>
   </div>
   <div class="footer-contact">
     <div>
       <a class="phone" href="tel:88002500030">8 (800) 250 00 30</a>
       <address>Анапа, Пионерский проспект, 13</address>
-      <div class="footer-actions"><a class="action light" href="https://max.ru/id2301114870_biz2" target="_blank" rel="noopener"><span>Канал в MAX</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 14 14 2 M2 2h12v12"/></svg></a><a class="action light" href="https://aleancollection.ru/hotels/"><span>Все отели Alean Collection</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 14 14 2 M2 2h12v12"/></svg></a></div>
+      <div class="footer-actions"><span class="action light" role="link" aria-disabled="true" tabindex="0"><span>Канал в MAX</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 14 14 2 M2 2h12v12"/></svg></span><a class="action light" href="https://aleancollection.ru/hotels/"><span>Все отели Alean</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 14 14 2 M2 2h12v12"/></svg></a></div>
     </div>
-    <div class="footer-company"><p>ООО «Алеан Отели»</p><a class="belka" aria-label="belka.one" href="https://belka.one"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="14" viewBox="0 0 30 14" fill="white" aria-hidden="true"><path d="M26.9,13.9c-.3-.8-1.7-2.9-2.7-4.2.6,0,2.3.1,3.5.1,1.3,0,2,0,2.2-.9.2-1-1.4-2.9-2.5-3.1-.2-.9-1.2-1.7-1.3,0,0,0-1,.8-2.2.9.2-.8,1.6-4.3,1.2-6.7h0c-7.1,6-12,3.2-19.6.2.1,2,2.6,4.4,4.9,7.3h0C7.9,6.6,3.5,2,.4,1.7c-.2,0-.4.2-.4.4.6,3.8,4.7,6,11,6.8-.2,1.7-1.1,3.3-2.9,5.1,6.3-.9,12.7-2.1,18.7-.1ZM11,8.9h0c-.2-.5-.2-.9-.5-1.4h0c2.8,1.7,8.7,1.2,12.9-.4.7,0,1.1,1,1.1,1,1.4,3.6-9.2,3.9-13.5.9Z"/></svg></a></div>
+    <div class="footer-company"><p>ООО «Алеан Отели»</p></div>
   </div>
 </footer>
 <div id="hotels" class="picker hotel-options" popover="manual" role="group" aria-label="Выберите отель" data-lenis-prevent>
-  <button type="button">Alean Family Olivia</button>
-  
+  <button type="button">Alean Family Olivia</button><button type="button">Alean Family Extency</button>
+  <button type="button">Alean Family Health</button><button type="button">Alean Family Emerald</button>
 </div>
 <div id="dates" class="picker calendar" popover="manual" role="group" aria-label="Выберите даты поездки" data-lenis-prevent>
   <div class="month-nav"><button type="button" data-month="-1" aria-label="Предыдущий месяц">‹</button><strong aria-live="polite"></strong><button type="button" data-month="1" aria-label="Следующий месяц">›</button></div>
-    <p class="calendar-offer">От 7 ночей: скидка 25%</p>
-    <p class="range-hint" aria-live="polite"></p>
+  <p class="range-hint" aria-live="polite"></p>
   <div class="weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
   <div class="days"></div>
 </div>
@@ -643,28 +508,10 @@
   <fieldset><legend>Взрослые</legend><div class="guest-choices" data-group="adults"></div></fieldset>
   <fieldset><legend>Дети</legend><div class="guest-choices" data-group="children"></div></fieldset>
 </div>
-<section class="booking-dock" id="booking" aria-label="Бронирование номера">
-    <div class="dock-offer"><span>Раннее бронирование</span><strong>−25%</strong><small>от 7 ночей, до 31.12.2026</small></div>
-    <button type="button" class="dock-toggle" aria-controls="booking-controls" aria-expanded="false">Выбрать даты</button>
-  <div class="dock-controls" id="booking-controls">
-      <div class="booking-fields">
-        <button class="field" type="button" aria-controls="hotels" disabled>
-          <span class="field-label">Отель</span><span class="field-value"><span style="display:block; min-width:0; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">Alean Family Olivia</span></span>
-        </button>
-        <button class="field" type="button" aria-controls="dates" aria-expanded="false">
-          <span class="field-label">Дата заезда и выезда</span><span class="field-value"><span data-roll>Выбрать даты</span><svg class="picker-icon" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M25 20.9323C22.7535 20.9323 20.9322 19.1111 20.9322 16.8645V3.03394H1V16.8645C1 19.1111 2.82121 20.9323 5.0678 20.9323H25Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/><path d="M1 9.13574H20.9322" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/><path d="M1 16.8645V25.0001H20.9322V20.9323" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/><path d="M5 6L5 0" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/><path d="M17 6L17 0" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/></svg></span>
-        </button>
-        <button class="field" type="button" aria-controls="guests" aria-expanded="false">
-          <span class="field-label">Размещение</span><span class="field-value"><span data-roll>Выбрать гостей</span><svg class="picker-icon" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M11.1693 9.11858C11.1693 10.8035 9.80348 12.1694 8.11849 12.1694C6.43355 12.1694 5.06763 10.8035 5.06763 9.11858C5.06763 7.43364 6.43355 6.06773 8.11849 6.06773C9.80348 6.06773 11.1693 7.43364 11.1693 9.11858Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M8.11873 16.2372C4.18718 16.2372 1 19.4243 1 23.3559V24.3728H15.2373V23.3559C15.2373 19.4243 12.0502 16.2372 8.11873 16.2372Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M20.9323 5.05095C20.9323 6.73589 19.5664 8.10181 17.8814 8.10181C16.1965 8.10181 14.8306 6.73589 14.8306 5.05095C14.8306 3.36602 16.1965 2.0001 17.8814 2.0001C19.5664 2.0001 20.9323 3.36602 20.9323 5.05095Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M18.4755 20.3049H25V19.288C25 15.3564 21.8129 12.1693 17.8814 12.1693C16.193 12.1693 14.642 12.7571 13.4216 13.7391" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg></span>
-        </button>
-        <label class="field promo"><span class="field-label">Промокод</span><span class="promo-control"><input class="field-value" type="text" name="promo" placeholder="Введите промокод" autocomplete="off"><span class="field-value promo-roll" aria-hidden="true"></span></span></label>
-      </div>
-      <button class="search-rooms" type="button"><span>Найти номер</span></button>
-  </div>
-</section>
-<aside class="cookie-info" aria-label="Уведомление о cookie" hidden>
-  <p>Мы используем куки, чтобы сайт был удобнее. Подробнее в <a href="https://aleancollection.ru/cookies/" target="_blank" rel="noopener">политике использования куки</a> и <a href="documents/politika-obrabotki-personalnykh-dannykh-v6.pdf" target="_blank" rel="noopener">политике обработки персональных данных</a>.</p>
-  <button type="button">Принять</button>
-</aside>
-<script src="pages-notice.js"></script></body>
+<div id="callback-methods" class="picker hotel-options" popover="manual" role="group" aria-label="Как связаться" data-lenis-prevent>
+  <button type="button" aria-pressed="true">Звонок</button>
+  <button type="button" aria-pressed="false">Сообщение в Max</button>
+</div>
+<script src="pages-notice.js"></script>
+</body>
 </html>
